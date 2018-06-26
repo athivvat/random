@@ -1,6 +1,15 @@
 extends layout
 
 block content
-  header
-    h1= title
-    p Version: มาลัยเสี่ยงรัก 1.0
+  .container
+    .row 
+      div(class="col-md-6 offset-md-3")
+        header
+          h1= title
+          p.version Version: มาลัยเสี่ยงรัก 1.0
+          hr
+        form(action="/result" method="post")
+          input(type="text" class="form-control" placeholder="Employee ID" name="employeeId")
+          button(type="submit" class="btn btn-primary btn-lg") เริ่มเสี่ยงทาย
+        p.caution <strong>คำเตือน!</strong> โปรแกรมนี้ศักสิทธิ์นักแล ผ่านการปลุกเสกมาแล้ว 9 วัด โปรดท่องนะโม 3 จบก่อนกดเสี่ยงทาย
+  
