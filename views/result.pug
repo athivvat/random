@@ -9,10 +9,14 @@ block content
           p.version Version: มาลัยเสี่ยงรัก 1.0
           hr
         
-        div(class="result alert alert-primary animated fadeIn") 
-            p 80039
-            p สมหญิง มานะยิ่ง (ชมพู่)
-            p Marketing
+        if message
+          div(class="result alert alert-danger animated fadeIn") 
+            p=message
+        else 
+          div(class="result alert alert-primary animated fadeIn") 
+              p 80039
+              p สมหญิง มานะยิ่ง (ชมพู่)
+              p Marketing
         
         .back
             a(href="/" ) กลับหน้าแรก
