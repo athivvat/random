@@ -3,4 +3,23 @@ extends layout
 block content
   .container
     .row 
-        h1 Match Result
+        div(class="col-md-10 offset-md-1")
+          h1 Match Result
+          br
+          - var no = 1;
+          table.table
+            tr 
+              th #
+              th Name
+              th Buddy
+              th Budder
+            each user in users
+              tr
+                td=no++
+                td=user.name
+                td 
+                  if user.haveBuddy
+                    =user.buddy.name
+                td 
+                  if user.haveBudder
+                    =user.budder.name
